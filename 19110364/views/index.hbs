@@ -1,0 +1,24 @@
+<h1>Index Page</h1>
+
+<a href="/create">Add post</a>
+{{#unless listPost}}
+  <div>{{message}}</div>
+{{else}}
+<table class="table" style="width: 400px">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">title</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each listPost}}
+    <tr>
+      <th scope="row">{{id}}</th>
+      <td>{{title}}</td>
+      <td><button>Xóa</button></td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+{{/unless}}
